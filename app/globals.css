@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background-color: #f5efe6;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+  font-family: var(--font-heading);
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.gradient-overlay {
+  background: linear-gradient(180deg, rgba(15, 30, 20, 0.15) 0%, rgba(15, 30, 20, 0.85) 100%);
+}
+
+.text-shadow {
+  text-shadow: 0 10px 30px rgba(17, 24, 39, 0.65);
+}
+
+button:focus-visible,
+ a:focus-visible {
+  outline: 3px solid rgba(154, 179, 161, 0.9);
+  outline-offset: 3px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.35), transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(154, 179, 161, 0.25), transparent 55%);
+  pointer-events: none;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  width: 60%;
+  height: 3px;
+  background-color: rgb(154, 179, 161);
+}
